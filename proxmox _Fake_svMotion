@@ -1,0 +1,4 @@
+#Source to Destination
+ssh root@ORIGIN vzdump VMID --mode snapshot --compress 0 --remove 0 --node NODE --stdout | (sleep 5; /usr/sbin/qmrestore - NEWVMID --storage local-zfs)
+
+#Destination to Source
